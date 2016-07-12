@@ -5,11 +5,11 @@ import java.util.List;
 
 public class CatServiceResponse {
 	
-	List<String> availableProducts;
+	List<Product> availableProducts;
 
-	public List<String> getAvailableProducts() {
+	public List<Product> getAvailableProducts() {
 		if (availableProducts==null){
-			availableProducts = new ArrayList<String>();
+			availableProducts = new ArrayList<Product>();
 			
 		}
 		return availableProducts;

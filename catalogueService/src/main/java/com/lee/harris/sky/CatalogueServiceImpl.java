@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.lee.harris.sky.beans.CatServiceRequest;
 import com.lee.harris.sky.beans.CatServiceResponse;
+import com.lee.harris.sky.beans.Product;
 
 /**
  * @author leeharris
@@ -24,8 +25,11 @@ public class CatalogueServiceImpl implements CatalogueService {
 	public CatServiceResponse availableProducts(CatServiceRequest request) {
 		
 		CatServiceResponse response = new CatServiceResponse();
-		response.getAvailableProducts().add("product");
-		response.getAvailableProducts().add("product2");
+		Product product = new Product();
+		product.setCatagory("News");
+		product.setName("Sky News");
+		response.getAvailableProducts().add(product);
+		
 		
 		
 		return response;
