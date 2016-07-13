@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lee.harris.sky.beans.CatServiceRequest;
+
 import com.lee.harris.sky.beans.CatServiceResponse;
 import com.lee.harris.sky.beans.Product;
 import com.lee.harris.sky.dao.ProductCatalogue;
