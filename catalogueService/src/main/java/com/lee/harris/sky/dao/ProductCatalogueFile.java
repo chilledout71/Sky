@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import com.lee.harris.sky.beans.Product;
 
 
-@Component
+
 public class ProductCatalogueFile implements ProductCatalogue {
 
 	@Override

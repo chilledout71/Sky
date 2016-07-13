@@ -4,6 +4,7 @@ public class Product {
 	
 	private String name;
 	private String catagory;
+	private String location;
 	public String getCatagory() {
 		return catagory;
 	}
@@ -15,6 +16,22 @@ public class Product {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	public Product(String name, String catagory, String location) {
+		super();
+		this.name = name;
+		this.catagory = catagory;
+		this.location = location;
+	}
+	public Product() {
+		super();
 	}
 
 }

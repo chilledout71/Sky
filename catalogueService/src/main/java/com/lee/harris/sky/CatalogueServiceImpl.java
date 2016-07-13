@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.lee.harris.sky.beans.CatServiceRequest;
@@ -29,11 +30,11 @@ public class CatalogueServiceImpl implements CatalogueService {
 	 */
 	@Override
 	@RequestMapping("/availableProducts")
-	public CatServiceResponse availableProducts(CatServiceRequest request) {
+	public CatServiceResponse availableProducts(@RequestParam("location")String location ) {
 		
 		CatServiceResponse response = new CatServiceResponse();
 		
-		ArrayList<Product> productList = (ArrayList<Product>) catalogue.readProduct(request.getLocation());
+		ArrayList<Product> productList = (ArrayList<Product>) catalogue.readProduct(location);
 
 		for(Product product:productList)
 			response.getAvailableProducts().add(product);
