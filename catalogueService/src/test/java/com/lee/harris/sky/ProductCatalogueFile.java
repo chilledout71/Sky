@@ -1,11 +1,10 @@
-package com.lee.harris.sky.dao;
+package com.lee.harris.sky;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Component;
-
 import com.lee.harris.sky.beans.Product;
+import com.lee.harris.sky.dao.ProductCatalogue;
 
 
 

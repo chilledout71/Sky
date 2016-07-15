@@ -7,7 +7,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import com.lee.harris.sky.beans.Product;
-@Component 
+@Component("productCatalogue") 
 public class ProductCatalogueJDBCDAO implements ProductCatalogue {
 
 	@Autowired
