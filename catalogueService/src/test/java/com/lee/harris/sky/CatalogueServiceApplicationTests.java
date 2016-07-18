@@ -4,12 +4,14 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
@@ -37,13 +39,14 @@ public class CatalogueServiceApplicationTests {
 			assertTrue(this.webApplicationContext.containsBean("productCatalogue"));
 			assertTrue(this.webApplicationContext.containsBean("catalogueServiceImpl"));
 		}
+		
 		@Test
 		public void testLocationSet() {
 			 
 			mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
 			try {
 				mockMvc.perform(get("/availableProducts?location=LONDON"))
-				  .andExpect(status().isOk());
+				  .andExpect(status().isOk()).andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON));
 				  
 			} catch (Exception e) {
 				fail("exception should not be thrown");
@@ -58,7 +61,7 @@ public class CatalogueServiceApplicationTests {
 			mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
 			try {
 				mockMvc.perform(get("/availableProducts?location="))
-				  .andExpect(status().isOk());
+				  .andExpect(status().isOk()).andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON));
 				  
 			} catch (Exception e) {
 				fail("exception should not be thrown");
