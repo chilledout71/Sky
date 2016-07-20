@@ -34,4 +34,8 @@ public class Product {
 		super();
 	}
 
+	public String toString() {
+		
+		return ("{name: " + name + " ,catagory: " + catagory + " ,location: " +location +"}");
+	}
 }

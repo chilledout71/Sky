@@ -16,7 +16,6 @@ import com.lee.harris.sky.dao.ProductCatalogueJDBCDAO;
 public class ProductCatalogueJDBCDaoTest {
 
 	
-	
 	private EmbeddedDatabase db;
 	
 	@Before
