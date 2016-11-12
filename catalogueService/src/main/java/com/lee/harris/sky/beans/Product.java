@@ -1,9 +1,17 @@
 package com.lee.harris.sky.beans;
 
 public class Product {
-	
+	/**
+	 * name of the product
+	 */
 	private String name;
+	/**
+	 * Category of the product
+	 */
 	private String catagory;
+	/**
+	 * location the product is available in
+	 */
 	private String location;
 	public String getCatagory() {
 		return catagory;

@@ -11,7 +11,7 @@ import com.lee.harris.sky.beans.CatServiceResponse;
  */
 public interface CatalogueService {
 /**
- * 	
+ *  	
  * @param request
  * @return {@link CatServiceResponse}
  */
