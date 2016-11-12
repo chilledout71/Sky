@@ -33,11 +33,12 @@ public class ProductCatalogueJDBCDAO implements ProductCatalogue {
                 "SELECT category, product, location FROM products WHERE location = ?", new Object[] { location }
 		, (rs, rowNum) -> new Product(rs.getString("product"),rs.getString("category"),  rs.getString("location")));
 		
-	
-		productList.addAll(jdbcTemplate.query(
-                "SELECT category, product, location FROM products WHERE location = ?", new Object[] { "" }
-		, (rs, rowNum) -> new Product(rs.getString("product"),rs.getString("category"),  rs.getString("location"))));
-	
+		//if the location was set to a value , get the default list. if it wasn't set we already have the default list from above
+		if(location!=""){
+			productList.addAll(jdbcTemplate.query(
+					"SELECT category, product, location FROM products WHERE location = ?", new Object[] { "" }
+					, (rs, rowNum) -> new Product(rs.getString("product"),rs.getString("category"),  rs.getString("location"))));
+		}
 		logger.debug("Returned product List is " +productList);
 		
 		return productList;

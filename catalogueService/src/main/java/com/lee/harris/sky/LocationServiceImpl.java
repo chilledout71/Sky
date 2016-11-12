@@ -21,7 +21,7 @@ public class LocationServiceImpl implements LocationService {
 	 */
 	@Override
 	@RequestMapping("/location")
-	public String getLocation(@RequestParam("id")String customerID) {
+	public String getLocation(@RequestParam("custId")String customerID) {
 		
 		if(customerID.equals("lonCust")){
 			return "LONDON";

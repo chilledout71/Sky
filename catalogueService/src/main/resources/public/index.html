@@ -1,56 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
-<script>
-	</script>
+<title>Sky Store</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="index.js"></script>
+<style>
+.products{
+	width: 33.33%;
+	float: left;
+  	min-height: 1px;
+	padding-right: 20px; /* column-space */
+}
+</style>
 </head>
 
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Sky Store</a>
+	<div >
+		<div class="products">
+			<div id="sportsList">
+				<h3>Sports</h3>
 			</div>
 		</div>
-	</nav>
-
-	<div class="jumbotron">
-		<div class="container">
-			<h1>Sky Store</h1>
-			<p>Welcome to the Sky Store Library</p>
+		<div class="products"> 
+			<div id="NewsList">
+				<h3>News</h3>
+			</div>
 		</div>
+		
 	</div>
 
-	<div class="container">
-		TV Packages Available
-		<div class="row">
-			<div class="col-md-4">
-				<h2>Sports Packages</h2>
-				<div th:each="product : ${customerProducts.sports}">
-					<label th:text="${product}"></label> <input th:id="${product}"
-						type="checkbox" th:checked="${false}" class="addChannel" />
-				</div>
-			</div>
-			<div class="col-md-4">
-				<h2>News Packages</h2>
-				<div th:each="product : ${customerProducts.news}">
-					<label th:text="${product}"></label> <input th:id="${product}"
-						type="checkbox" th:checked="${false}" class="addChannel" />
-				</div>
-			</div>
-			<div class="col-md-4">
-				<h2>Basket</h2>
-				<p id="basket"></p>
-				<p>
-					<a class="btn btn-default" href="#" role="button">Complete
-						Purchase &raquo;</a>
-				</p>
-			</div>
-		</div>
 
-
-
-	</div>
 </body>
 </html>
