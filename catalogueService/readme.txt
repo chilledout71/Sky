@@ -3,7 +3,7 @@ Building the application
 2) type mvn package
 
 the to run the application
-1) java -jar \target\catalogueService-0.0.1-SNAPSHOT.jar
+1) java -jar target/catalogueService-0.0.1-SNAPSHOT.jar
 2) in the browser navigate to 
 
 http://localhost:8080/?custId=lonCust	- for a london customer
@@ -13,3 +13,4 @@ http://localhost:8080/?custId=			 - for a non location customer
 To ShutDown the application in a terminal run the following 
  curl -X POST localhost:8080/shutdown
 
+Please note the UI is limited. I implemented enough to demonstrate the services. I'm not an experianced UI developer
