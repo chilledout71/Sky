@@ -34,7 +34,7 @@ public class ProductCatalogueJDBCDAO implements ProductCatalogue {
 		, (rs, rowNum) -> new Product(rs.getString("product"),rs.getString("category"),  rs.getString("location")));
 		
 		//if the location was set to a value , get the default list. if it wasn't set we already have the default list from above
-		if(location!=""){
+		if(!location.isEmpty()){
 			productList.addAll(jdbcTemplate.query(
 					"SELECT category, product, location FROM products WHERE location = ?", new Object[] { "" }
 					, (rs, rowNum) -> new Product(rs.getString("product"),rs.getString("category"),  rs.getString("location"))));
