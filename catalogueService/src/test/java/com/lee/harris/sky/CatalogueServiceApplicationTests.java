@@ -38,6 +38,7 @@ public class CatalogueServiceApplicationTests {
 			assertNotNull(this.webApplicationContext);
 			assertTrue(this.webApplicationContext.containsBean("productCatalogue"));
 			assertTrue(this.webApplicationContext.containsBean("catalogueServiceImpl"));
+			assertTrue(this.webApplicationContext.containsBean("locationServiceImpl"));
 		}
 		
 		@Test

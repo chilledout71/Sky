@@ -8,9 +8,9 @@ the to run the application
 
 http://localhost:8080/?custId=lonCust	- for a london customer
 http://localhost:8080/?custId=liverCust  - for a liverpool customer
-http://localhost:8080/?custId=			 - for a non location customer
+http://localhost:8080/?custId=anyName	 - for a non location customer
 
 To ShutDown the application in a terminal run the following 
  curl -X POST localhost:8080/shutdown
 
-Please note the UI is limited. I implemented enough to demonstrate the services. I'm not an experianced UI developer
+Please note the UI is limited. I implemented enough to demonstrate the services. I'm not an experienced UI developer

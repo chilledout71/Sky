@@ -1,5 +1,9 @@
 package com.lee.harris.sky.beans;
-
+/**
+ * Object that represents a sky product
+ * @author leeharris
+ *
+ */
 public class Product {
 	/**
 	 * name of the product
